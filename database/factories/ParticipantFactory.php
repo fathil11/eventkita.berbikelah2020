@@ -10,6 +10,8 @@ $factory->define(Participant::class, function (Faker $faker) {
     return [
         'code' => Str::random(6),
         'name' => $faker->name,
+        'age' => $faker->randomFloat(2, 5, 70),
+        'gender' => $faker->randomElement(['m', 'f']),
         'email' => $faker->email,
         'address' => $faker->address,
         'phone' => $faker->phoneNumber

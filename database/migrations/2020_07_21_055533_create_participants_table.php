@@ -17,6 +17,8 @@ class CreateParticipantsTable extends Migration
             $table->id();
             $table->string('code', 6)->unique();
             $table->string('name');
+            $table->integer('age');
+            $table->char('gender');
             $table->string('email');
             $table->string('address');
             $table->string('phone');

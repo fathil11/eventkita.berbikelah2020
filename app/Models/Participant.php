@@ -9,4 +9,12 @@ class Participant extends Model
 {
     use SoftDeletes;
     protected $guarded = [];
+
+    public function getGenderAttribute($gender)
+    {
+        return [
+            'm' => 'L',
+            'f' => 'P'
+        ][$gender];
+    }
 }
