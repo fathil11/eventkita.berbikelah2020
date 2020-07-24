@@ -71,7 +71,7 @@
                         </div>
                         <!-- /.card-body -->
                         <div class="card-footer justify-content-between">
-                            <button type="button" id="btnSubmit" class="genric-btn primary circle">Daftar</button>
+                            <button type="button" id="btnSubmit" class="genric-btn btn-block primary circle">Daftar</button>
                         </div>
                         <button id="submit" type="submit" hidden></button>
                         <!-- /.card -->
