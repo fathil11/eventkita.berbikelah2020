@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html lang="en">
 
 <head>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="/public-assets/img/logo.png">
+    <link rel="shortcut icon" href="/public-assets/img/logo.ico">
     <!-- Author Meta -->
     <meta name="author" content="CodePixar">
     <!-- Meta Description -->
@@ -27,7 +27,8 @@
     <link rel="stylesheet" href="/public-assets/css/nice-select.css">
     <link rel="stylesheet" href="/public-assets/css/magnific-popup.css">
     <link rel="stylesheet" href="/public-assets/css/bootstrap.css">
-    <link rel="stylesheet" href="/public-assets/css/main.css">
+    <link rel="stylesheet" href="/public-assets/css/main.css?v=0.2.3">
+    <link rel="stylesheet" href="/public-assets/js/sweetalert2/sweetalert2.min.css">
 </head>
 
 <body>
@@ -37,7 +38,7 @@
             <div class="header-wrap">
                 <div class="header-top d-flex justify-content-between align-items-center">
                     <div class="logo">
-                        <a href="index.php"><img src="/public-assets/img/logo.png" width="50px" height="50px" alt=""></a>
+                        <a href="/"><img src="/public-assets/img/logo.png" width="50px" height="50px" alt=""></a>
                     </div>
                     <div class="main-menubar d-flex align-items-center">
                         <nav class="hide">

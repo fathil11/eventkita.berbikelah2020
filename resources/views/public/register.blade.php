@@ -3,9 +3,8 @@
 <!-- About Generic Start -->
 <section class="about-generic-area">
     <div class="container border-top-generic">
-        <div class="row mt-5">
+        <div class="row mt-5 justify-content-center">
             <div class="col-lg-8 align-content-center">
-
                 <form action="/daftar" method="post">
                     @csrf
                     @method('POST')
@@ -27,16 +26,20 @@
                                     placeholder="Umur">
                             </div>
 
-                            <p>Jenis Kelamin</p>
-                            <div class="form-check form-check-inline ml-4 mr-5">
-                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio1"
-                                    value="m" {{ (old('gender') == 'L') ? 'checked' : ''}}>
-                                <label class="form-check-label" for="inlineRadio1">Laki-laki</label>
+                            <label>Jenis Kelamin :</label>
+                            <div class="form-group-sm d-flex">
+                                <label class="primary-radio">
+                                    <input id="jkel1" type="radio" name="gender" value="m" {{ (old('gender') == 'L') ? 'checked' : ''}}>
+                                    <label for="jkel1"></label>
+                                </label>
+                                <label for="zone1"><p>&nbsp; Laki-laki</p></label>
                             </div>
-                            <div class="form-check form-check-inline ml-4 mb-3">
-                                <input class="form-check-input" type="radio" name="gender" id="inlineRadio2"
-                                    value="f" {{ (old('gender') == 'P') ? 'checked' : '' }}>
-                                <label class="form-check-label" for="inlineRadio2">Perempuan</label>
+                            <div class="form-group-sm d-flex">
+                                <label class="primary-radio">
+                                    <input id="jkel2" type="radio" name="gender" value="f" {{ (old('gender') == 'P') ? 'checked' : '' }}>
+                                    <label for="jkel2"></label>
+                                </label>
+                                <label for="zone1"><p>&nbsp; Perempuan</p></label>
                             </div>
 
                             <div class="form-group">

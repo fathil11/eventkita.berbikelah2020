@@ -5,7 +5,7 @@
 <section class="about-generic-area">
     <div class="container border-top-generic">
 
-        <div class="row mt-5">
+        <div class="row mt-5 justify-content-center">
             <div class="col-lg-8 align-content-center">
                 <div class="card card-primary">
                     <div class="card-header">
