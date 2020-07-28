@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Participant;
 use Illuminate\Http\Request;
 use Softon\SweetAlert\Facades\SWAL;
@@ -28,6 +29,7 @@ class AdminController extends Controller
         return view('admin.participants', compact('participants'));
     }
 
+
     public function showAddParticipants()
     {
         return view('admin.add-participant');
@@ -53,6 +55,19 @@ class AdminController extends Controller
         SWAL::message('Hore', 'Berhasil mengedit peserta', 'success');
         return redirect('/admin/peserta');
     }
+    public function deleteParticipant($id)
+    {
+        $participant = Participant::findOrFail($id);
+        $participant->delete();
+        SWAL::message('Yeay', 'Berhasil menghapus peserta', 'success');
+        return redirect()->back();
+    }
+
+    public function showParticipantsPayment()
+    {
+        $participants = Participant::all();
+        return view('admin.participants-payment', compact('participants'));
+    }
 
     public function paidParticipant($id)
     {
@@ -72,11 +87,29 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    public function deleteParticipant($id)
+    public function showParticipantsMerchant()
+    {
+        $participants = Participant::whereNotNull('paid_by')->get();
+        return view('admin.participants-merchant', compact('participants'));
+    }
+
+    public function getParticipantMerchant($id)
     {
         $participant = Participant::findOrFail($id);
-        $participant->delete();
-        SWAL::message('Yeay', 'Berhasil menghapus peserta', 'success');
+        $participant->get_merchant_by = Auth::user()->id;
+        $participant->get_merchant_at = Carbon::now();
+        $participant->save();
+        SWAL::message('Hore', 'Peserta berhasil mengambil merchant', 'success');
+        return redirect()->back();
+    }
+
+    public function cancelParticipantMerchant($id)
+    {
+        $participant = Participant::findOrFail($id);
+        $participant->get_merchant_by = null;
+        $participant->get_merchant_at = null;
+        $participant->save();
+        SWAL::message('Yeay', 'Berhasil membatalkan pengambilan merchant', 'success');
         return redirect()->back();
     }
 }

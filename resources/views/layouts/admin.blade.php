@@ -56,7 +56,8 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="/admin" class="brand-link">
-                <img src="/public-assets/img/logo.png" alt="Instansi Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="/public-assets/img/logo.png" alt="Instansi Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
                 <span class="brand-text font-weight-light">BerBIKELah 2020</span>
             </a>
             <!-- Sidebar -->
@@ -64,11 +65,12 @@
 
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                        <a href="/admin" class="nav-link {{ Request::is('admin') ? 'active' : '' }}">
+                            <a href="/admin" class="nav-link {{ Request::is('admin') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-home"></i>
                                 <p>
                                     Dashboard
@@ -85,15 +87,27 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
+                                    <a href="/admin/peserta/tambah" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tambah Peserta</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
                                     <a href="/admin/peserta" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Daftar Peserta</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/peserta/tambah" class="nav-link">
+                                    <a href="/admin/peserta/pembayaran" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Tambah Peserta</p>
+                                        <p>Pembayaran Peserta</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/peserta/merchant" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Merchant Peserta</p>
                                     </a>
                                 </li>
                             </ul>
@@ -122,7 +136,8 @@
 
         </div>
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong> All rights
+            reserved.
             <div class="float-right d-none d-sm-inline-block">
                 <b>Version</b> 3.0.2
             </div>

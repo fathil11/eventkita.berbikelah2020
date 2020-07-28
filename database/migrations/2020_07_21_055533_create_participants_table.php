@@ -23,6 +23,8 @@ class CreateParticipantsTable extends Migration
             $table->string('address');
             $table->string('phone');
             $table->foreignId('paid_by')->nullable()->constrained('users');
+            $table->foreignId('get_merchant_by')->nullable()->constrained('users');
+            $table->dateTime('get_merchant_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

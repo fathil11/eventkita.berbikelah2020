@@ -14,6 +14,7 @@ $factory->define(Participant::class, function (Faker $faker) {
         'gender' => $faker->randomElement(['m', 'f']),
         'email' => $faker->email,
         'address' => $faker->address,
-        'phone' => $faker->phoneNumber
+        'phone' => $faker->phoneNumber,
+        'paid_by' => $faker->randomElement([null, 1]),
     ];
 });

@@ -10,7 +10,7 @@
                     @method('POST')
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Pendaftaran Peserta</h3>
+                            <h3 class="card-title text-center">Pendaftaran Peserta</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -34,6 +34,7 @@
                                 </label>
                                 <label for="zone1"><p>&nbsp; Laki-laki</p></label>
                             </div>
+
                             <div class="form-group-sm d-flex">
                                 <label class="primary-radio">
                                     <input id="jkel2" type="radio" name="gender" value="f" {{ (old('gender') == 'P') ? 'checked' : '' }}>
@@ -47,6 +48,7 @@
                                 <input type="text" name="address" value="{{ old('address') }}" class="form-control"
                                     placeholder="Alamat">
                             </div>
+
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Email</label>
                                 <input type="email" name="email" value="{{ old('email') }}" class="form-control"
@@ -58,7 +60,8 @@
                                 <input type="tel" name="phone" value="{{ old('phone') }}" class="form-control"
                                     placeholder="Cth: 0811 ...">
                             </div>
-                            <div class="form-group-sm d-flex">
+
+                            <div class="form-group-sm d-flex mt-3">
                                 <div class="primary-checkbox">
                                     <input id="terms" type="checkbox" id="terms"
                                         {{ (old('terms')!=null) ? 'checked' : ''}}>
